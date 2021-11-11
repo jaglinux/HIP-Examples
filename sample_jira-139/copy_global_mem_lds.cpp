@@ -17,7 +17,6 @@
 #include <hip/hip_vector_types.h>
 
 // Helper functions
-
 #define GPU_ERR_CHECK(expr)                     \
     {                                           \
         gpu_assert((expr), __FILE__, __LINE__); \

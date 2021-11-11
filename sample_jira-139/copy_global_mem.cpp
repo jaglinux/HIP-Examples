@@ -69,7 +69,7 @@ void execute_test(const int   len,
     for(auto i = 0; i < batch; i++)
         for(auto j = 0; j < len; j++)
         {
-            in[i * len + j].x = in[i * len + j].y = i * len + j;
+            in[i * len + j].x = i * len + j;
             std::cout << "input is " << in[i * len + j].x << std::endl;
         }
 

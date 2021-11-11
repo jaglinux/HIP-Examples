@@ -52,7 +52,6 @@ void execute_test(const int   len,
     size_t o_total_size  = len * batch;
     size_t i_total_bytes = i_total_size * sizeof(T);
     size_t o_total_bytes = o_total_size * sizeof(T);
-    size_t lds_bytes     = len * sizeof(T);
 
     GPU_ERR_CHECK(hipSetDevice(device_id));
     dim3 grid(batch);

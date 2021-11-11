@@ -97,7 +97,7 @@ void execute_test(const int   len,
             std::cout << "output is " << out[idx].x << std::endl;
             if((int)(out[idx].x) != i * len + j)
             {
-                std::cerr << "failed at [" << idx << "]: " << out[idx].x << ", " << out[idx].y
+                std::cerr << "failed at [" << idx << "]: " << out[idx].x
                         << ", expected " << i * len + j << std::endl;
                 exit(0);
             }

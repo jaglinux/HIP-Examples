@@ -16,7 +16,6 @@
 #include <hip/hip_runtime_api.h>
 #include <hip/hip_vector_types.h>
 
-
 // Helper functions
 
 #define GPU_ERR_CHECK(expr)                     \
@@ -36,7 +35,6 @@ inline void gpu_assert(hipError_t e, const char* file, int line, bool abort = tr
         exit(e);
     }
 }
-
 
 // Copy from global memory to global memory through LDS
 template <typename T>
@@ -90,7 +88,6 @@ void execute_test(const int len,
         out[i].x = -1;
     }
 
-
     GPU_ERR_CHECK(hipMalloc(&d_in, i_total_bytes));
     GPU_ERR_CHECK(hipMalloc(&d_out, o_total_bytes));
     GPU_ERR_CHECK(hipMemcpy(d_in, in.data(), i_total_bytes, hipMemcpyHostToDevice));
@@ -124,7 +121,6 @@ void execute_test(const int len,
     GPU_ERR_CHECK(hipFree(d_out));
 }
 
-
 int main(int argc, char* argv[])
 {
     std::string type = "float2";
@@ -137,5 +133,3 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
-
